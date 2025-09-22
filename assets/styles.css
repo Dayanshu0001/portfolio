@@ -1343,4 +1343,36 @@ img, video { max-width: 100%; height: auto; }
 form { width: 100%; }
 input, textarea { width: 100%; box-sizing: border-box; }
 
+git add .
+git commit -m "Make site responsive (viewport + media queries)"
+git push origin main
+/* Mobile-first responsive helpers */
+html { font-size: 100%; }
+.container { width: 92%; max-width: 1100px; margin: 0 auto; }
+img, video { max-width: 100%; height: auto; }
+
+/* Typography */
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; }
+p  { font-size: 1rem; }
+
+/* Grid/rows */
+.section-row { display: flex; flex-direction: column; gap: 16px; }
+@media (min-width: 769px) {
+  .section-row { flex-direction: row; gap: 24px; }
+}
+
+/* Navigation stack on small screens */
+nav ul { display: flex; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 768px) { nav ul { flex-direction: column; } }
+
+/* Breakpoints */
+@media (min-width: 769px) and (max-width:1024px) {
+  html { font-size: 112.5%; } /* ~18px */
+}
+@media (min-width:1025px) {
+  html { font-size: 125%; } /* ~20px */
+}
+
+
 
