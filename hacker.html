@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cybersecurity Portfolio — Dayanshu Sharma</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body.hacker {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    body.hacker #matrix {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      display: block;
+    }
+    body.hacker main {
+      flex: 1 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    body.hacker nav,
+    body.hacker footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    body.hacker footer {
+      flex-shrink: 0;
+      width: 100%;
+      margin-top: auto;
+    }
+
+    /* Hacking Tools Section */
+    .tools-section {
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .tool-card {
+      background: rgba(0,0,0,0.5);
+      border: 1px solid var(--hacker-green);
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.3s ease;
+    }
+    .tool-card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.6rem;
+      filter: drop-shadow(0 0 6px var(--hacker-green));
+    }
+    .tool-card span {
+      font-size: 0.9rem;
+      color: var(--hacker-green);
+      text-shadow: 0 0 6px var(--hacker-green);
+    }
+    .tool-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 15px var(--hacker-green);
+    }
+  </style>
+</head>
+<body class="hacker">
+  <canvas id="matrix"></canvas>
+
+  <nav class="nav glass dark">
+    <div class="nav-left">
+      <h1 class="brand">Dayanshu Sharma</h1>
+      <span class="tagline">Ethical Hacker</span>
+    </div>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="uiux.html" class="nav-link">UI/UX</a>
+      <a href="hacker.html" class="nav-link active">Cybersecurity</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <main class="container hacker-content">
+    <header class="terminal-box fade-up">
+      <h2 id="typewriter" class="typewriter"></h2>
+    </header>
+
+    <h2 class="section-heading fade-up">Projects</h2>
+    <section class="projects-grid">
+      <article class="glitch-card fade-up">
+        <h3>Inventory System Security</h3>
+        <p>Added secure login & audit logging for data safety.</p>
+      </article>
+      <article class="glitch-card fade-up">
+        <h3>NGO Connect Security Review</h3>
+        <p>Ensuring data validation, secure access & protection.</p>
+      </article>
+      <article class="glitch-card fade-up">
+        <h3>Penetration Testing of SME Virtual Network</h3>
+        <p>Ensuring data validation, secure access & protection.</p>
+      </article>
+    </section>
+
+    <section class="achievements-section fade-up">
+      <h2 class="section-heading">Achievements</h2>
+      <article class="glitch-card">
+        <h3>CTF & VAPT</h3>
+        <p>Hands-on challenges, CSAY CTF rank 77, penetration testing basics.</p>
+      </article>
+    </section>
+
+    <!-- New Hacking Tools Section -->
+    <section class="tools-section fade-up">
+      <h2 class="section-heading">Hacking Tools I Use</h2>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <img src="assets/kali.png" alt="Kali Linux">
+          <span>Kali Linux</span>
+        </div>
+        <div class="tool-card">
+          <img src="assets/burpsuite.png" alt="Burp Suite">
+          <span>Burp Suite</span>
+        </div>
+        <div class="tool-card">
+          <img src="assets/nmap.png" alt="Nmap">
+          <span>Nmap</span>
+        </div>
+        <div class="tool-card">
+          <img src="assets/metasploit.png" alt="Metasploit">
+          <span>Metasploit</span>
+        </div>
+        <div class="tool-card">
+          <img src="assets/wireshark.png" alt="Wireshark">
+          <span>Wireshark</span>
+        </div>
+        <div class="tool-card">
+          <img src="assets/python.png" alt="Python">
+          <span>Python</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="actions-row">
+      <a class="btn btn-hacker" href="assets/Dayanshu_Cybersecurity_Resume.pdf" download>⬇ Resume</a>
+      <a class="btn btn-secondary" href="https://github.com/Dayanshu0001" target="_blank">
+        <!-- GitHub Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+
+<section class="hacker-quote-section">
+  <blockquote class="hacker-quote">
+    <p>“The quieter you become, the more you are able to hear.”</p>
+    <span>— Hacker Philosophy</span>
+  </blockquote>
+</section>
+
+  </main>
+
+  <footer class="footer dark-footer">
+    <p>&copy; 2025 Dayanshu Sharma — Ethical Hacking</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>

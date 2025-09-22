@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Dayanshu Sharma</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="contact dark-theme">
+  <nav class="nav glass">
+    <div class="nav-left">
+      <h1 class="brand">Dayanshu Sharma</h1>
+      <span class="tagline">Get in touch</span>
+    </div>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="uiux.html" class="nav-link">UI/UX</a>
+      <a href="hacker.html" class="nav-link">Cybersecurity</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </div>
+  </nav>
+
+  <main class="contact-page">
+    <header class="hero-section">
+      <h2>Let’s <span class="accent">Collaborate</span></h2>
+      <p>Have a project or idea? Drop me a message.</p>
+    </header>
+
+    <div class="contact-wrapper glass fade-up">
+      <form id="contactForm" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+        <button type="submit" class="btn btn-primary ripple">Send Message</button>
+        <p id="formMsg" class="form-msg"></p>
+      </form>
+    </div>
+    <div class="bubbles"></div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Dayanshu Sharma — Contact</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("ZtcPl9nwGXUcNnppo");
+  })();
+
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_3wq6d9b", "template_9q470d6", this)
+      .then(() => {
+        alert("✅ Message sent! Check your inbox.");
+        this.reset();
+      }, (err) => {
+        console.error("Error:", err);
+        alert("❌ Failed to send message.");
+      });
+  });
+</script>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
