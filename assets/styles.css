@@ -1284,3 +1284,63 @@ body.hacker footer:hover {
   background: rgba(255, 255, 255, 0.12); /* slightly brighter on focus */
 }
 
+/* Put near top of your stylesheet */
+html { font-size: 100%; } /* 16px baseline */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 1rem; /* 16px default */
+  color: #fff;
+  background: #000;
+}
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+img { max-width: 100%; height: auto; display: block; }
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; }
+p  { font-size: 1rem; }
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html { font-size: 112.5%; } /* 18px */
+  .container { width: 90%; }
+  h1 { font-size: 2.2rem; }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  html { font-size: 125%; } /* 20px */
+  .container { width: 100%; padding: 0 20px; }
+  h1 { font-size: 2.6rem; }
+}
+nav ul {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap; /* allows wrapping on narrow screens */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* On small screens, turn nav into a column */
+@media (max-width: 768px) {
+  nav ul { flex-direction: column; gap: 8px; }
+}
+.section-row {
+  display: flex;
+  gap: 20px;
+  flex-direction: column; /* mobile first */
+}
+@media (min-width: 769px) {
+  .section-row { flex-direction: row; align-items: flex-start; }
+  .section-row .col { flex: 1; }
+}
+img, video { max-width: 100%; height: auto; }
+form { width: 100%; }
+input, textarea { width: 100%; box-sizing: border-box; }
+
+
